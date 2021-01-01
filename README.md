@@ -1,5 +1,5 @@
 # Remove Background From an Image
-Initially I used Mask RCNN for the segmentation purpose, but its output is not the ideal one, as some background pixels were classified as foreground. So to solve this I used grabcut alogorithm on top of it and used mask returned by Mask RCNN as a seed to it, I didn't input the 'on mask' with pixel value '1', I made the 'on mask' pixel value '3' which is the probable foreground, if I didn't do this step, then grabcut might return the same mask as of mask rcnn. I also used the corresponding bbox returned by Mask RCNN as ROI rectangle for grabcut.
+Initially, I used Mask RCNN for the segmentation purpose, but its output is not the ideal one, as some background pixels were classified as foreground. So to solve this I used grabcut algorithm on top of it and used mask returned by Mask RCNN as a seed to it, I didn't input the 'on a mask' with pixel value '1', I made the 'on a mask' pixel value '3' which is the probable foreground, if I didn't do this step, then grabcut might return the same mask as of mask can. I also used the corresponding box returned by Mask RCNN as an ROI rectangle for grabcut.
 
 ### Input Image
 
